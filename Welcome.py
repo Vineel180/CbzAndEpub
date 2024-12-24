@@ -15,6 +15,8 @@ while True:
 
     print("Enter nothing for default path.")
     mainFolderPath = v.inputSpecial("Main Folder Path: ", inputAttribute=v.Green+v.Bright)
+    if not mainFolderPath:
+        mainFolderPath = r"D:\Code\ProgramFiles\CbzAndEpub\Welcome"
     if not vinFileManagement.doesFolderExist(mainFolderPath):
         v.printSpecial("This folder doesn't exist. Retry.", v.Red)
         print()
