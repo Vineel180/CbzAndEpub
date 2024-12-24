@@ -1,5 +1,5 @@
 import vinTerminalFormatting as v
-import vinFileManagement
+import vinFileManagement_Base
 import AppData.Cbzs2Pics as Cbzs2Pics
 import AppData.Epubs2Pics as Epubs2Pics
 import AppData.Pics2Cbzs as Pics2Cbzs
@@ -17,7 +17,7 @@ while True:
     mainFolderPath = v.inputSpecial("Main Folder Path: ", inputAttribute=v.Green+v.Bright)
     if not mainFolderPath:
         mainFolderPath = r"D:\Code\ProgramFiles\CbzAndEpub\Welcome"
-    if not vinFileManagement.doesFolderExist(mainFolderPath):
+    if not vinFileManagement_Base.doesFolderExist(mainFolderPath):
         v.printSpecial("This folder doesn't exist. Retry.", v.Red)
         print()
         continue
